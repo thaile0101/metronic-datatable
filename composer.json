@@ -1,0 +1,11 @@
+{
+    "name": "thaile/metronic-datatable",
+    "description": "using datatable in metronic template admin",
+    "authors": [
+        {
+            "name": "Thai Le",
+            "email": "thaile.dev01@gmail.com"
+        }
+    ],
+    "require": {}
+}
