@@ -10,7 +10,10 @@
     "autoload": {
         "psr-4": {
             "ThaiLe\\MetronicDatatable\\": "src"
-        }
+        },
+        "files": [
+            "helpers/common.php"
+        ]
     },
     "require": {}
 }
