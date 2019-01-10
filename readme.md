@@ -1,4 +1,5 @@
-![Readme Art](overview.png)
+<h3 align="center"><img src="https://upload.wikimedia.org/wikipedia/vi/9/91/FC_Barcelona_logo.svg"></h3>
+
 
 # Metronic datatable
 
