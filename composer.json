@@ -7,5 +7,10 @@
             "email": "thaile.dev01@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "ThaiLe\\MetronicDatatable\\": "src"
+        }
+    },
     "require": {}
 }
