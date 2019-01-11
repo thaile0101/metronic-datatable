@@ -52,18 +52,6 @@ From the root directory of your project run the command:
 composer update
 ```
 
-In `config/app.php` file, load package service provider into your app
-
-```
-'providers' => [
-    ...,
-
-    ThaiLe\MetronicDatatable\MetronicDatatableDatatableServiceProvider::class,
-    ...
-]
-
-```
-
 Note: this is optional step. You can also publish package's config and view files into you app
 
 ```
