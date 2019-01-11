@@ -1,13 +1,10 @@
-@php $format = array_get($column, 'filter.format', 'Y-m-d H:i:s'); @endphp
-
-<th>
+<th class="{{ isset($data['column']['class']) ? $data['column']['class'] : '' }}">
     <div class="input-group date">
         <input type="text"
-               data-column-index="{{ $index or '' }}"
-               class="form-control form-filter input-sm ajaxdatatable-datetime-filter"
-               data-date-format="{{ convert_to_js_date_time_format($format, true) }}"
+               class="form-control form-filter input-sm datatable-datetime-filter {{$class}}"
+               data-date-format="{{ $format }}"
                onkeydown="return false"
-               name="{{ $name or '' }}">
+               name="{{ $name }}">
 
         <span class="input-group-btn">
             <button class="btn btn-metal btn-clear-date-filter" type="button">

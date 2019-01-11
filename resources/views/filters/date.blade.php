@@ -1,18 +1,18 @@
-@php $format = array_get($column, 'filter.format', 'Y-m-d'); @endphp
-
-<th>
+<th class="{{ isset($data['column']['class']) ? $data['column']['class'] : '' }}">
     <div class="input-group date">
-        <input type="text"
-               data-column-index="{{ $index or '' }}"
-               class="form-control form-filter input-sm ajaxdatatable-date-filter"
-               data-date-format="{{ convert_to_js_date_time_format($format, true) }}"
-               onkeydown="return false"
-               name="{{ $name or '' }}">
-
-        <span class="input-group-btn">
-            <button class="btn btn-metal btn-clear-date-filter" type="button">
-                <i class="fa fa-times"></i>
-            </button>
-        </span>
-    </div>
+        <input
+            type="text"
+            class="form-control m-input datatable-date-filter {{$class}}"
+            readonly=""
+            placeholder="Select date"
+            data-date-format="{{ $format }}"
+            onkeydown="return false"
+            name="{{ $name }}"
+        />
+         <div class="input-group-append">
+              <span id="clear-date" class="input-group-text">
+                   <i class="la la-calendar-check-o"></i>
+               </span>
+          </div>
+     </div>
 </th>

@@ -252,5 +252,36 @@ jQuery(document).ready(function () {
     MetronicDatatable.init();
 });
 
+var MetronicDatatablePlugin = function () {
+
+    var showDatepicker = function showDatepicker() {
+        $(".datatable-date-filter, .datatable-datetime-filter").datepicker({
+            todayHighlight: !0,
+            orientation: "bottom left",
+            templates: {
+                leftArrow: '<i class="la la-angle-left"></i>',
+                rightArrow: '<i class="la la-angle-right"></i>'
+            }
+        });
+    };
+
+    var showSelect2 = function showSelect2() {
+        $(".select2").select2({
+            placeholder: "Select value"
+        });
+    };
+
+    return {
+        init: function init() {
+            showDatepicker();
+            showSelect2();
+        }
+    };
+}();
+
+jQuery(document).ready(function () {
+    MetronicDatatablePlugin.init();
+});
+
 /***/ })
 /******/ ]);

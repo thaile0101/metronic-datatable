@@ -1,7 +1,7 @@
 @section('style')
     <link href="/admin/metronic-datatable/global/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 @stop
-
+<script src="/admin/metronic-datatable/global/bootstraps/bootstrap-datepicker.js" type="text/javascript"></script>
 <script src="/admin/metronic-datatable/global/datatables/datatables.bundle.js" type="text/javascript"></script>
 <script src="/admin/metronic-datatable/thaile.metronic.datatable.js" type="text/javascript"></script>
 <script type="application/javascript">
@@ -35,12 +35,12 @@
                             d.only_trashed = onlyTrash
                             @foreach($table['columns'] as $k => $column)
                                 @if($column['orderable'])
-                                    @if(array_key_exists('filter', $column) && $column['filter']['type'] == 'input')
-                                        d.{{$k}} = $('input[name={{$k}}]').val()
-                                    @endif
                                     @if (array_key_exists('filter', $column) && $column['filter']['type'] == 'select')
                                         d.{{$k}} = $('select[name={{$k}}]').val()
+                                    @else
+                                        d.{{$k}} = $('input[name={{$k}}]').val()
                                     @endif
+
                                 @endif
                             @endforeach
                     },

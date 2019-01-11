@@ -12,8 +12,9 @@
         @php
             $type            = array_get($column, 'filter.type', '');
             $value            = array_get($column, 'filter.value', '');
-            $dataColumnIndex = $hasCheckbox ? $loop->iteration : $loop->iteration - 1;
-            $data            = ['name' => $key, 'index' => $dataColumnIndex, 'column' => $column]
+            $format            = array_get($column, 'filter.date-format', 'dd/mm/yyyy');
+            $class            = array_get($column, 'filter.class', '');
+            $data            = ['name' => $key, 'column' => $column, 'class' => $class]
         @endphp
 
         @if (empty($type))

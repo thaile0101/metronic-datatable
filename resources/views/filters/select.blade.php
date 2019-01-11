@@ -1,5 +1,5 @@
-<th>
-    <select class="filter-select form-control form-filter" data-column-index="{{ $index or '' }}" name="{{ $name }}">
+<th class="{{ isset($data['column']['class']) ? $data['column']['class'] : '' }}">
+    <select class="filter-select form-control form-filter {{$class}}" name="{{ $name }}">
         <option value="">{{ __('Select') }}</option>
 
         @foreach(array_get($column, 'filter.data') as $optionValue => $optionText)
