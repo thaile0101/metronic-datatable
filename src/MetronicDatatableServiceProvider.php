@@ -14,9 +14,10 @@ class MetronicDatatableServiceProvider extends ServiceProvider
     public function boot()
     {
         if ($this->app->runningInConsole()) {
-            $this->publishes([__DIR__ . '/../resources/views' => resource_path('views/vendor/metronic-datatable')], 'views');
+            //$this->publishes([__DIR__ . '/../resources/views' => resource_path('views/vendor/metronic-datatable')], 'views');
             $this->publishes([__DIR__ . '/config.php' => config_path('metronic-datatable.php')], 'config');
             $this->publishes([__DIR__ . '/../public' => public_path('admin/metronic-datatable')], 'public');
+            $this->publishes([__DIR__ . '/../resources/lang' => resource_path('lang')], 'resources');
         }
 
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'metronic-datatable');

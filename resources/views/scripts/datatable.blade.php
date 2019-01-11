@@ -5,7 +5,7 @@
 <script src="/admin/metronic-datatable/global/datatables/datatables.bundle.js" type="text/javascript"></script>
 <script src="/admin/metronic-datatable/thaile.metronic.datatable.js" type="text/javascript"></script>
 <script type="application/javascript">
-    var transMetronicDatatable  = {!! json_encode(trans('metronic-datatable::metronic-datatable')) !!};
+    var transMetronicDatatable  = {!! json_encode(trans('metronic-datatable', [], app()->getLocale())) !!};
     var tableItem = null;
     var onlyTrash = false;
 
@@ -64,18 +64,18 @@
                     }
                 ],
                 "language": {
-                    "lengthMenu": "{{ __('metronic-datatable::metronic-datatable.lengthMenu') }}",
-                    "zeroRecords": "{{ __('metronic-datatable::metronic-datatable.zeroRecords') }}",
-                    "info": "{{ __('metronic-datatable::metronic-datatable.info') }}",
-                    "infoEmpty": "{{ __('metronic-datatable::metronic-datatable.infoEmpty') }}",
-                    "search": "{{ __('metronic-datatable::metronic-datatable.search') }}",
+                    "lengthMenu": "{{ __('metronic-datatable.lengthMenu') }}",
+                    "zeroRecords": "{{ __('metronic-datatable.zeroRecords') }}",
+                    "info": "{{ __('metronic-datatable.info') }}",
+                    "infoEmpty": "{{ __('metronic-datatable.infoEmpty') }}",
+                    "search": "{{ __('metronic-datatable.search') }}",
                     "paginate": {
-                        "first":      "{{ __('metronic-datatable::metronic-datatable.first') }}",
-                        "last":       "{{ __('metronic-datatable::metronic-datatable.last') }}",
-                        "next":       "{{ __('metronic-datatable::metronic-datatable.next') }}",
-                        "previous":   "{{ __('metronic-datatable::metronic-datatable.previous') }}"
+                        "first":      "{{ __('metronic-datatable.first') }}",
+                        "last":       "{{ __('metronic-datatable.last') }}",
+                        "next":       "{{ __('metronic-datatable.next') }}",
+                        "previous":   "{{ __('metronic-datatable.previous') }}"
                     },
-                    "infoFiltered": "({{ __('metronic-datatable::metronic-datatable.infoFiltered') }})"
+                    "infoFiltered": "({{ __('metronic-datatable.infoFiltered') }})"
                 }
             });
 

@@ -10,11 +10,21 @@ var MetronicDatatablePlugin = function () {
                 rightArrow: '<i class="la la-angle-right"></i>'
             }
         })
-    };
+    }
+
+    function showSelect2 () {
+        $(".datatable-select2").select2();
+    }
+
+    function PortletTools () {
+        var e = new mPortlet("metroic_portlet_tool");
+    }
 
     return {
         init: function init() {
             showDatepicker();
+            showSelect2();
+            PortletTools();
         }
     }
 }();

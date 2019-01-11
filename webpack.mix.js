@@ -11,4 +11,4 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/datatable.js', 'public/thaile.metronic.datatable.js');
+mix.js('resources/js/app.js', 'public/thaile.metronic.datatable.js');
