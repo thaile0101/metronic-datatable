@@ -8,11 +8,12 @@
     var transMetronicDatatable  = {!! json_encode(trans('metronic-datatable', [], app()->getLocale())) !!};
     var tableItem = null;
     var onlyTrash = false;
+    var idDatatableMetronic = "{{$table['id']}}";
 
     var DatatableRun = {
         init: function () {
             var page = 1;
-            tableItem = $("#itemTable").DataTable({
+            tableItem = $('#' + idDatatableMetronic).DataTable({
                 "processing": true,
                 "serverSide": true,
                 "searching": false,

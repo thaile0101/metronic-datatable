@@ -77,7 +77,7 @@ var MetronicDatatable = function () {
     }
 
     function confirmDestroyItem() {
-        $('#itemTable tbody').on('click','button', function() {
+        $('#' + idDatatableMetronic + ' tbody').on('click','button', function() {
             swal({
                 title: transMetronicDatatable.confirm_destroy_item_title,
                 text: transMetronicDatatable.confirm_destroy_item_text,
@@ -95,7 +95,7 @@ var MetronicDatatable = function () {
     }
 
     function confirmDeleteItem() {
-        $('#itemTable tbody').on('click', '.datatable-delete', function () {
+        $('#' + idDatatableMetronic + ' tbody').on('click', '.datatable-delete', function () {
             let _that = $(this);
             swal({
                 title: transMetronicDatatable.confirm_delete_item_title,
@@ -114,7 +114,7 @@ var MetronicDatatable = function () {
     }
 
     function confirmRestoreItem() {
-        $('#itemTable tbody').on('click', '.datatable-restore', function () {
+        $('#' + idDatatableMetronic + ' tbody').on('click', '.datatable-restore', function () {
             let that = $(this);
             swal({
                 title: transMetronicDatatable.confirm_restore_item_title,
